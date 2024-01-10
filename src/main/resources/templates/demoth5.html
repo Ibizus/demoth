@@ -12,10 +12,11 @@
 <a th:href="@{/registrar}" >Registrar</a>
 <br/>
 <br/>
-<!-- QUERY PARAMs -->
+<!-- QUERY PARAMs ( penaliza el SEO)  -->
 <a th:href="@{/libros(id=${libro.id},titulo=${libro.titulo})}" th:text="'Ver libro: '+${libro.titulo}">Ver libro</a>
 <br/>
 <br/>
+<!-- Enlace con estructura de recurso de directorio (REST) -->
 <a th:href="@{/libros/{id}/editar(id=${libro.id})}" th:text="'Editar libro: '+${libro.titulo}">Editar libro</a>
 
 </body>

@@ -83,4 +83,21 @@ public class DemoTHController {
 		return "demoth5";
 	}
 
+	@GetMapping("/demoth6")
+	public String demoth6(Model model) {
+
+		Libro libro = new Libro(1, "El Quijote", "Miguel Cervantes", "Anaya");
+
+		model.addAttribute("libro", libro);
+
+		return "demoth6";
+	}
+
+	@GetMapping("/pruebaFragments") // Aquí puede ir cualquier nombre, como "pruebaFragments" es el que vamos a llamar en la ruta del navegador
+	public String demoth7(Model model) {
+
+		return "fragments"; // Aquí si que debe ir el mismo nombre que el archivo que se va a devolver
+	}
+
+
 }
